@@ -1,0 +1,143 @@
+﻿@import './styles/theme.scss';
+
+page {
+  background: var(--background);
+  color: var(--text-900);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+view,
+text,
+navigator,
+button,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+.fit-app {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-900);
+}
+
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+  padding: var(--space-5) var(--space-4) 120px;
+  background: var(--background);
+}
+
+.ambient-blob {
+  display: none; /* Removed for minimalist design */
+}
+
+.surface-card {
+  position: relative;
+  z-index: 1;
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.section-heading__title {
+  font-size: var(--font-2xl);
+  font-weight: 600;
+  color: var(--text-900);
+  letter-spacing: -0.5px;
+}
+
+.section-heading__hint {
+  font-size: var(--font-base);
+  color: var(--text-500);
+}
+
+/* Button Base */
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  border-radius: 999px; /* Pill shape for Apple feel */
+  font-size: var(--font-lg);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+}
+
+.primary-button {
+  color: #ffffff;
+  background: var(--primary-500);
+  border: none;
+}
+
+.primary-button--lunch {
+  background: var(--success) !important;
+}
+
+.secondary-button {
+  color: var(--text-900);
+  background: var(--secondary-100);
+  border: none;
+
+  &:active {
+    background: var(--text-300);
+  }
+}
+
+.soft-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--text-600);
+  background: var(--secondary-100);
+}
+
+.badge-pro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: var(--primary-500);
+}
+
+/* Global Form Input */
+.form-input {
+  width: 100%;
+  height: 56px;
+  padding: 0 var(--space-4);
+  background: var(--secondary-100);
+  border-radius: 14px;
+  font-size: var(--font-lg);
+  color: var(--text-900);
+  transition: background var(--transition-fast);
+
+  &:focus {
+    background: var(--surface);
+    box-shadow: 0 0 0 2px var(--primary-500);
+  }
+}

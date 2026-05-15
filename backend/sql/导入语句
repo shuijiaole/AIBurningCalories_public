@@ -1,0 +1,1 @@
+mysql -u root -p fitness < backend/sql/fitness_full.sql

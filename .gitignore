@@ -1,0 +1,28 @@
+# Node
+node_modules/
+dist/
+.swc/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+
+# WeChat Miniprogram
+project.private.config.json
+
+# Backend
+frontend-dist/
+storage/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
